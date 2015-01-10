@@ -36,7 +36,7 @@
 									<a href=""><img src="img/DrinkbotLogolight.jpg" /></a>
 								</div>
 								<div class="ui-block-c">
-									<a href=""><img src="img/addIcon.jpg" /></a>
+									<a href="#addSection"><img src="img/addIcon.jpg" /></a>
 								</div>
 					
 						</div>
@@ -78,11 +78,102 @@
 					   </div>
 					</div>   
 					
-				<div data-role="footer" data-position="fixed" data-theme="b">
-					<h4>Settings</h4>
+				<div data-role="footer" data-position="fixed" data-theme="b" class="footer-style">
+					<a href="#settingsSection" data-role="none" ><h4>Settings</h4></a>
 				</div>
 		</section>
+
+		<section id="addSection" data-role="page" data-theme="a">
+
+					<div data-role="header" data-position="fixed" data-theme="a">
+						<div class="my-header-grid ui-grid-b">
+								<div class="ui-block-a">
+									<a href=""><img src="img/recycleIcon.jpg" /></a>
+								</div>
+								<div class="ui-block-b">
+									<a href="#home"><img src="img/DrinkbotLogolight.jpg" /></a>
+								</div>
+								<div class="ui-block-c">
+									<a href="#addSection"><img src="img/addIcon.jpg" /></a>
+								</div>
+						</div>
+					</div>
+					
+					
+					<div data-role="content" data-theme="a" class="addSettings">
+						<h1>Add New Drink</h1>
+					   <form name="addDrink" id="addDrinkForm" action="" onsubmit="return addDrink();"  data-ajax="false" >
+									<input type="text" name="drink_name" id="drink_name" value="" placeholder="Drink name"/>
+
+							<div class="ui-grid-a">
+								<div class="ui-block-a"><label for="ingredient1" >Ingredients</label></div>
+								<div class="ui-block-b"><label for="amount1" >Amount(Cl)</label></div>	   
+							</div>
+							<div class="ui-grid-a">
+								<div class="ui-block-a"><input type="text" name="ingredient1" id="ingredient1" value=""/></div>
+								<div class="ui-block-b"><input type="text" name="amount1" id="amount1" value=""/></div>	 
+								<div class="ui-block-a"><input type="text" name="ingredient2" id="ingredient2" value=""/></div>
+								<div class="ui-block-b"><input type="text" name="amount2" id="amount2" value=""/></div>
+								<div class="ui-block-a"><input type="text" name="ingredient3" id="ingredient3" value=""/></div>
+								<div class="ui-block-b"><input type="text" name="amount3" id="amount3" value=""/></div>
+								<div class="ui-block-a"><input type="text" name="ingredient4" id="ingredient4" value=""/></div>
+								<div class="ui-block-b"><input type="text" name="amount4" id="amount4" value=""/></div>
+								<div class="ui-block-a"><input type="text" name="ingredient5" id="ingredient5" value=""/></div>
+								<div class="ui-block-b"><input type="text" name="amount5" id="amount5" value=""/></div>
+								<div class="ui-block-a"><input type="text" name="ingredient6" id="ingredient6" value=""/></div>
+								<div class="ui-block-b"><input type="text" name="amount6" id="amount6" value=""/></div>
+								<div class="ui-block-a"><input type="text" name="ingredient7" id="ingredient7" value=""/></div>
+								<div class="ui-block-b"><input type="text" name="amount7" id="amount7" value=""/></div>								
+							</div>
+						</form>
+					
+				</div>   
+					
+				<div data-role="footer" data-position="fixed" data-theme="b" class="footer-style">
+					<a href="" data-role="none" ><h4>Save</h4></a>
+				</div>
+		</section>		
 		
+		
+		
+		<section id="settingsSection" data-role="page" data-theme="a">
+
+					<div data-role="header" data-position="fixed" data-theme="a">
+						<div class="my-header-grid ui-grid-b">
+								<div class="ui-block-a">
+									<a href=""><img src="img/recycleIcon.jpg" /></a>
+								</div>
+								<div class="ui-block-b">
+									<a href="#home"><img src="img/DrinkbotLogolight.jpg" /></a>
+								</div>
+								<div class="ui-block-c">
+									<a href="#addSection"><img src="img/addIcon.jpg" /></a>
+								</div>
+						</div>
+					</div>
+					
+					
+					<div data-role="content" data-theme="a" class="addSettings">
+						<h1>Settings</h1>
+					    <form class="addSettings" name="settingsForm" id="settingsForm" action="" onsubmit="return settings();"  data-ajax="false" >
+									<br />
+									<label for="unitID" >unitID:</label>
+									<input type="text" name="unitID" id="unitID" value="" placeholder="unitID"/>
+									<br />
+									<label for="accesToken" >Acces Token:</label>
+									<input type="text" name="accesToken" id="accesToken" value="" placeholder="Acces Token"/>
+									<br />
+									<label for="drinkDatabase" >Drink Database:</label>
+									<input type="text" name="drinkDatabase" id="drinkDatabase" value="" placeholder="Drink Database"/>
+						
+						</form>
+					
+				</div>   
+					
+				<div data-role="footer" data-position="fixed" data-theme="b" class="footer-style">
+					<a href="" data-role="none" ><h4>Save</h4></a>
+				</div>
+		</section>		
 	<script type="text/javascript">
 	$(window).on('load', function () {
 		$(this).trigger('resize');
