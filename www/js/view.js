@@ -1,5 +1,5 @@
 $(function(){
-	/* $( "#cosmopolitan" ).bind( "click", function () {
-			alert( "Handler for .click() called." );
-	}); */
+	$( "#cosmopolitan" ).bind( "click", function () {
+			pour.drink("Cosmopolitan");
+	}); 
 });
