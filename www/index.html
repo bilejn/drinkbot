@@ -10,6 +10,7 @@
 			<link rel="stylesheet" href="css/drinkbotcss.css" />
 			
 			<script  type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+			<script type="text/javascript" src="phonegap.js"></script>
 			<script type="text/javascript">
 				$(document).bind("mobileinit", function() {
 					$.mobile.defaultPageTransition = "none";
@@ -19,6 +20,7 @@
 			</script>
 
 			<script type="text/javascript" src="js/jquery.mobile-1.4.2.js"></script>
+			<script type="text/javascript" src="js/view.js"></script>
 			
 
 
@@ -46,7 +48,7 @@
 					<div data-role="content" id="content" data-theme="a">
 					   <div class="ui-grid-a">
 							<div class="ui-block-a">
-								<a href=""><img src="img/drink/Cosmopolitan.jpg" /></a>
+								<img src="img/drink/Cosmopolitan.jpg" id="cosmopolitan" onclick="window.plugins.toast.showShortCenter('Hello there!')" />
 							</div>
 							<div class="ui-block-b">
 								<a href=""><img src="img/drink/CubaLibre.jpg" /></a>
