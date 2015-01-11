@@ -1,3 +1,48 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+h1, h2, h3, h4, h5, p {
+	font-family: Arial, Helvetica, sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+#home {
+	line-height: 0;
+}
+
+#home .ui-content{
+    padding:0;
+}
+
+#home .footer-style {
+	line-height: 1;
+}
+
+
     @media all{
         .my-header-grid.ui-grid-b .ui-block-a { width: 20%; }
         .my-header-grid.ui-grid-b .ui-block-b { width: 60%; }
@@ -17,6 +62,13 @@
 .addSettings {text-align: center;}
 #addDrinkForm .ui-block-a { width: 70%; }
 #addDrinkForm .ui-block-b { width: 30%; }
+
+
+
+.header-style {
+	margin:0;
+	padding:0;
+}
 
 .footer-style a{
 	text-decoration: none;
