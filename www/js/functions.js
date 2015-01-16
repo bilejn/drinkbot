@@ -23,3 +23,19 @@
 			);
 
 		}
+		
+		
+		function refresh () {
+		alert("refreshing");
+			$.ajax({
+				url : "http://lesi.mypressonline.com/test/index.php",
+				dataType:"jsonp",
+				jsonp:"mycallback",
+				success:function(data)
+				{
+					alert(data.drinkname);
+					alert (data.quantity);
+					
+				}
+			});
+		}
