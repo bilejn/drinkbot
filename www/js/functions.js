@@ -26,16 +26,17 @@
 		
 		
 		function refresh () {
-		alert("refreshing");
+
 			$.ajax({
-				url : "http://lesi.mypressonline.com/test/index.php",
+				url : "http://lesi.mypressonline.com/test/db.php",
 				dataType:"jsonp",
 				jsonp:"mycallback",
 				success:function(data)
 				{
-					alert(data.drinkname);
-					alert (data.quantity);
+					//alert(JSON.parse(data));
+					return data;
 					
 				}
 			});
 		}
+		
