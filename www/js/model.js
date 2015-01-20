@@ -6,9 +6,19 @@ var model = (function(base) {
 	
 	base.getJson = json;
 	
-	base.setJson = function (data) {
-		json = data;
-		$("#home").trigger("create");
+	base.setJson = function () {
+		$.ajax({
+    		url : "http://54.154.177.207/db.php",
+		    dataType:"jsonp",
+		    jsonp:"mycallback",
+		    success:function(data) {
+				$.jStorage.set("data", data);
+				$.mobile.changePage( "#home", { allowSamePageTransition: true } );
+		    },
+			error: function(e) {
+				window.plugins.toast.showShortTop('Network Error!');
+			}
+		});
 	}
 	
 	return base;
