@@ -32,28 +32,27 @@ $(function(){
 });
 
 $(document).on("pagebeforeshow", "#home", function (){
-		var list;
-		var grid = true;
-		model.getJson();
-		var json = JSON.parse(model.loadBase);
-		var list = '<div class="ui-grid-a">';
-		for (i = 0; i < json.length; i++){
-			if (grid) { 
-				var block = '<div class="ui-block-a">';
-			} else {
-				var block = '<div class="ui-block-b">';
+	if($.jStorage.get("data")){
+			var list;
+			var grid = true;
+			var json = JSON.parse($.jStorage.get("data"));
+			var list = '<div class="ui-grid-a">';
+			for (i = 0; i < json.length; i++){
+				if (grid) { 
+					var block = '<div class="ui-block-a">';
+				} else {
+					var block = '<div class="ui-block-b">';
+				}
+				list = list + block + '<img src="' + json[i].Url + '" id ="' + json[i].Name + '" onclick ="pour.drink(\'' + json[i].Name + '\')" /> </div>'; 
+				if (grid) {
+					grid = false;
+				} else {
+					grid = true;
+				}
 			}
-			list = list + block + '<img src="' + json[i].Url + '" id ="' + json[i].Name + '" onclick ="pour.drink(\'' + json[i].Name + '\')" /> </div>'; 
-			if (grid) {
-				grid = false;
-			} else {
-				grid = true;
-			}
-		}
-		
-		list = list + '</div>';
-		$("#homeScreenList").html(list);
-		$("#home").trigger("create"); 
-
+			list = list + '</div>';
+			$("#homeScreenList").html(list);
+			$("#home").trigger("create"); 
+	}
 });
 
