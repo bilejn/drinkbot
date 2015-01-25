@@ -37,7 +37,7 @@ var pour = (function(module) {
              access_token: accessToken,
              args: args
           },
-		  success: function (data){
+		  success: function (data, textStatus, jqXHR){
 			if(data.return_value == 0){
 				alert ("Order completed");
 			} else {

@@ -8,19 +8,19 @@ var model = (function(base) {
     		url : "http://54.154.177.207/db.php",
 		    dataType:"jsonp",
 		    jsonp:"mycallback",
-		    success:function(data) {
+		    success:function(data, textStatus, jqXHR) {
 				$.jStorage.set("data", data);
 				//window.plugins.toast.showShortCenter('List loaded!');
-				alert("List loaded (success callback)");
+				alert("List loaded (success callback) " + textStatus);
 				$.mobile.changePage( "#home", { allowSamePageTransition: true } );
 		    },
-			error: function(e) {
+			error: function(jqXHR, textStatus, errorThrown) {
 				//window.plugins.toast.showShortCenter('Network Error!');
-				alert("Error loading list (error callback)");
+				alert("Error loading list (error callback) " + textStatus + " " + errorThrown);
 			},
-			complete: function ( jqXHR, textStatus){
+			complete: function (jqXHR, textStatus){
 				//window.plugins.toast.showShortCenter('List loaded!');
-				alert("completed loading list (complete callback)");
+				alert("completed loading list (complete callback) " +  textStatus);
 			}
 		});
 	}
