@@ -43,7 +43,7 @@ $(document).on("pagebeforeshow", "#home", function (){
 				} else {
 					var block = '<div class="ui-block-b">';
 				}
-				list = list + block + '<img src="' + json[i].Url + '" id ="' + json[i].Name + '" onclick ="pour.drink(\'' + json[i].Name + '\')" /> </div>'; 
+				list = list + block + '<img src="' + json[i].Url + '" id ="' + json[i].Name + '" onclick ="pour.drink(\'' + json[i].Name + '\',\'' +extractAmount(json[i].Content0)+ '\',\'' +extractAmount(json[i].Content1)+ '\',\'' +extractAmount(json[i].Content2)+ '\',\'' +extractAmount(json[i].Content3)+ '\',\'' +extractAmount(json[i].Content4)+ '\',\'' +extractAmount(json[i].Content5)+ '\',\'' +extractAmount(json[i].Content6)+ '\',\'' +extractAmount(json[i].Content7)+ '\' )" /> </div>'; 
 				if (grid) {
 					grid = false;
 				} else {

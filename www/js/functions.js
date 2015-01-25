@@ -47,3 +47,14 @@
 			alert('Connection type: ' + states[networkState]);
 }
 
+		function extractAmount (amount){
+			if (amount.charAt(amount.length -2) == ","){
+				return "0"+amount.charAt(amount.length -1);
+			} else {
+				return amount.charAt(amount.length -2) + amount.charAt(amount.length -1);
+			}
+		}
+		
+		
+		
+
