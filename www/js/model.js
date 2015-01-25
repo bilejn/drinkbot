@@ -10,11 +10,12 @@ var model = (function(base) {
 		    jsonp:"mycallback",
 		    success:function(data) {
 				$.jStorage.set("data", data);
+				window.plugins.toast.showShortCenter('List loaded!');
 				$.mobile.changePage( "#home", { allowSamePageTransition: true } );
 		    },
 			error: function(e) {
 				window.plugins.toast.showShortCenter('Network Error!');
-			}
+			},
 			complete: function ( jqXHR, textStatus){
 				window.plugins.toast.showShortCenter('List loaded!');
 			}
