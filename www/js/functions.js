@@ -27,6 +27,7 @@
 		
 		function refresh () {
 			//window.plugins.toast.showShortCenter('Refreshing List');
+			alert("refreshing");
 			model.setJson();
 		}
 		

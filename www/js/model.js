@@ -10,14 +10,17 @@ var model = (function(base) {
 		    jsonp:"mycallback",
 		    success:function(data) {
 				$.jStorage.set("data", data);
-				window.plugins.toast.showShortCenter('List loaded!');
+				//window.plugins.toast.showShortCenter('List loaded!');
+				alert("List loaded (success callback)");
 				$.mobile.changePage( "#home", { allowSamePageTransition: true } );
 		    },
 			error: function(e) {
-				window.plugins.toast.showShortCenter('Network Error!');
+				//window.plugins.toast.showShortCenter('Network Error!');
+				alert("Error loading list (error callback)");
 			},
 			complete: function ( jqXHR, textStatus){
-				window.plugins.toast.showShortCenter('List loaded!');
+				//window.plugins.toast.showShortCenter('List loaded!');
+				alert("completed loading list (complete callback)");
 			}
 		});
 	}
