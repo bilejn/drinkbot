@@ -12,12 +12,7 @@ var pour = (function(module) {
 	}
 	
 	function callback (index) {
-		if (index == 0){
-			pourFunction();
-		} else {
-			alert("Order canceled!");
-		}
-	
+		alert(index);
 	}
 	
 	function pourFunction(){

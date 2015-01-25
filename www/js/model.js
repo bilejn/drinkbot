@@ -11,10 +11,12 @@ var model = (function(base) {
 		    success:function(data) {
 				$.jStorage.set("data", data);
 				$.mobile.changePage( "#home", { allowSamePageTransition: true } );
-				window.plugins.toast.showShortCenter('List loaded!');
 		    },
 			error: function(e) {
 				window.plugins.toast.showShortCenter('Network Error!');
+			}
+			complete: function ( jqXHR, textStatus){
+				window.plugins.toast.showShortCenter('List loaded!');
 			}
 		});
 	}
