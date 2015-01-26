@@ -48,11 +48,12 @@
 			states[Connection.CELL]     = 'Cell generic connection';
 			states[Connection.NONE]     = 'No network connection';
 
-			if(networkState == Connection.NONE){
+			/*if(networkState == Connection.NONE){
 				return false;	
 			} else {
 				return true;
-			}
+			}*/
+			alert (networkState);
 }
 
 		function extractAmount (amount){
