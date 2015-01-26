@@ -26,9 +26,12 @@
 		
 		
 		function refresh () {
-			//window.plugins.toast.showShortCenter('Refreshing List');
-			alert("refreshing");
-			model.setJson();
+			if (!checkConnection()){
+					alert ("No internet connection detected. Connect to internet and try again to download list.");
+				 } else {
+					window.plugins.toast.showShortCenter('Refreshing List');
+					model.setJson();
+			}
 		}
 		
 		
@@ -45,7 +48,11 @@
 			states[Connection.CELL]     = 'Cell generic connection';
 			states[Connection.NONE]     = 'No network connection';
 
-			alert('Connection type: ' + states[networkState]);
+			if(networkState == Connection.NONE){
+				return false;	
+			} else {
+				return true;
+			}
 }
 
 		function extractAmount (amount){
