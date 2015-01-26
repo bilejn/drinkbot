@@ -4,7 +4,6 @@ var model = (function(base) {
 	base.getJson = json;
 	
 	base.setJson = function () {
-		alert("ajax starting");
 		$.ajax({
     		url : "http://54.154.177.207/db.php",
 		    dataType:"jsonp",
@@ -12,16 +11,14 @@ var model = (function(base) {
 		    success:function(data, textStatus, jqXHR) {
 				$.jStorage.set("data", data);
 				//window.plugins.toast.showShortCenter('List loaded!');
-				alert("List loaded (success callback) " + textStatus);
+				//alert("List loaded.");
 				$.mobile.changePage( "#home", { allowSamePageTransition: true } );
 		    },
 			error: function(jqXHR, textStatus, errorThrown) {
-				//window.plugins.toast.showShortCenter('Network Error!');
-				alert("Error loading list (error callback) " + textStatus + " " + errorThrown);
+				window.plugins.toast.showShortCenter("Error loading list.");
 			},
 			complete: function (jqXHR, textStatus){
-				//window.plugins.toast.showShortCenter('List loaded!');
-				alert("completed loading list (complete callback) " +  textStatus);
+
 			}
 		});
 	}

@@ -28,7 +28,6 @@ var pour = (function(module) {
         var url = "https://api.spark.io/v1/devices/" + coreId + "/setpumps";
 		
         //Turn on the alertInfo div to show the user that the pumping is being attempted
-        alert("Order sent");
         //Make the Ajax Call
         $.ajax({
           type: "POST",
@@ -39,9 +38,9 @@ var pour = (function(module) {
           },
 		  success: function (data, textStatus, jqXHR){
 			if(data.return_value == 0){
-				alert ("Order completed");
+				window.plugins.toast.showShortCenter("Order completed");
 			} else {
-				alert ("Error completing order");
+				window.plugins.toast.showShortCenter("Error completing order");
 			}
 		  },
           complete: function (jqxhr, status) {
