@@ -14,6 +14,8 @@
 			<script type="text/javascript" src="js/jstorage.js"></script>
 			<script type="text/javascript">
 				$(document).bind("mobileinit", function() {
+					$.support.cors = true;
+					$.mobile.allowCrossDomainPages = true;
 					$.mobile.defaultPageTransition = "none";
 					$.mobile.defaultDialogTransition = "none";
 					$.mobile.listview.prototype.options.dividerTheme = "b";
