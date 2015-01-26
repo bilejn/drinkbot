@@ -4,6 +4,7 @@ var model = (function(base) {
 	base.getJson = json;
 	
 	base.setJson = function () {
+		alert("ajax starting");
 		$.ajax({
     		url : "http://54.154.177.207/db.php",
 		    dataType:"jsonp",
