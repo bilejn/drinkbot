@@ -1,17 +1,16 @@
 var model = (function(base) {
 	var json;
+	var db = $.jStorage.get("drink_Database");
 	
 	base.getJson = json;
 	
 	base.setJson = function () {
 		$.ajax({
-    		url : "http://54.154.177.207/db.php",
+    		url : db,
 		    dataType:"jsonp",
 		    jsonp:"mycallback",
 		    success:function(data, textStatus, jqXHR) {
 				$.jStorage.set("data", data);
-				//window.plugins.toast.showShortCenter('List loaded!');
-				//alert("List loaded.");
 				$.mobile.changePage( "#home", { allowSamePageTransition: true } );
 		    },
 			error: function(jqXHR, textStatus, errorThrown) {

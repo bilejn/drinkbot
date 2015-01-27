@@ -29,6 +29,7 @@
 			<script type="text/javascript" src="js/model.js"></script>
 			<script type="text/javascript" src="js/pour.js"></script>
 			<script type="text/javascript" src="js/functions.js"></script>
+			<script type="text/javascript" src="js/form.js"></script>
 			
 
 
@@ -137,24 +138,27 @@
 					
 				<div data-role="content" data-theme="a" class="addSettings">
 						<h2>Settings</h2>
-					    <form class="addSettings" name="settingsForm" id="settingsForm" action="" onsubmit="return settings();"  data-ajax="false" >
+					    <form name="settingsForm" action="" onsubmit="return settingsFormf();"  data-ajax="false" >
+
 									<br />
-									<label for="unitID" >unitID:</label>
+									<label id="unitIDLabel" for="unitID" >unitID:</label>
 									<input type="text" name="unitID" id="unitID" value="" placeholder="unitID"/>
 									<br />
-									<label for="accesToken" >Acces Token:</label>
-									<input type="text" name="accesToken" id="accesToken" value="" placeholder="Acces Token"/>
+									<label id="accessTokenLabel" for="accessToken" >Access Token:</label>
+									<input type="text" name="accessToken" id="accessToken" value="" placeholder="Access Token"/>
 									<br />
-									<label for="drinkDatabase" >Drink Database:</label>
-									<input type="text" name="drinkDatabase" id="drinkDatabase" value="" placeholder="Drink Database"/>
-						
+									<label id="drinkDatabaseLabel" for="drinkDatabase" >Drink Database:</label>
+									<input  type="text" name="drinkDatabase" id="drinkDatabase" value="" placeholder="Drink Database"/>
+
+									<input type="submit" value="Submit"  id="submit" data-role="button" data-icon="check">
+
 						</form>
-						<a href="" data-role="button" onclick="$.jStorage.flush()" >Delete list</a>
+
 				</div>   
-					
 				<div data-role="footer" data-position="fixed" data-theme="b" class="footer-style" data-tap-toggle="false" >
-					<a href="" data-role="none" ><h4>SAVE</h4></a>
-				</div>
+					<a href="#home" data-role="none" onclick="deleteSettings();"><h4>DELETE SETTINGS</h4></a>
+				</div>					
+
 		</section>
 		
 	<script type="text/javascript">

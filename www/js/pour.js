@@ -21,11 +21,11 @@ var pour = (function(module) {
 	
 	function pourFunction(){
 	
-		var coreId = "50ff70065067545650150287";
-        var accessToken = "35a502f3b004169b59838d087b2d20afebf85dc4";
+		var unitId = $.jStorage.get("unit_ID");
+        var accessToken = $.jStorage.get("access_Token");
         //This builds the URL to the REST API endpoint for the setpumps function
         //with your given coreId
-        var url = "https://api.spark.io/v1/devices/" + coreId + "/setpumps";
+        var url = "https://api.spark.io/v1/devices/" + unitId + "/setpumps";
 		
         //Turn on the alertInfo div to show the user that the pumping is being attempted
         //Make the Ajax Call
@@ -55,16 +55,3 @@ var pour = (function(module) {
 	return module;
 }(	pour || {}));
 
-/* Your access_token is: 35a502f3b004169b59838d087b2d20afebf85dc4
-	Your UnitID: 50ff70065067545650150287 
-
-
-
-
-curl https://api.spark.io/v1/devices/50ff70065067545650150287/order\-d access_token=35a502f3b004169b59838d087b2d20afebf85dc4\-dparams=”P0:00;P1:00;P2:00;P3:00;P4:00;P5:00;P6:00;P7:04"
-Your access_token is: 35a502f3b004169b59838d087b2d20afebf85dc4
-Your UnitID: 50ff70065067545650150287 
-
-
-curl https://api.spark.io/v1/devices/50ff70065067545650150287/setpumps   -d access_token=35a502f3b004169b59838d087b2d20afebf85dc4   -d "args=P0:00;P1:00;P2:00;P3:00;P4:00;P5:00;P6:00;P7:04"
-*/

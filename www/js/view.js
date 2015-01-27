@@ -56,3 +56,19 @@ $(document).on("pagebeforeshow", "#home", function (){
 	}
 });
 
+$(document).on("pagebeforeshow", "#settingsSection", function (){
+	if ($.jStorage.get("unit_ID") != null){
+		document.settingsForm.unitID.value = $.jStorage.get("unit_ID");
+	}
+	if ($.jStorage.get("access_Token") != null){
+		document.settingsForm.accessToken.value = $.jStorage.get("access_Token");	
+	}
+	if ($.jStorage.get("drink_Database") != null){
+		document.settingsForm.drinkDatabase.value = $.jStorage.get("drink_Database");	
+	}
+
+	$("#settingsSection").trigger("create");
+	
+
+});
+
