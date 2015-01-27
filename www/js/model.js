@@ -1,10 +1,11 @@
 var model = (function(base) {
 	var json;
-	var db = $.jStorage.get("drink_Database");
+			
 	
 	base.getJson = json;
 	
 	base.setJson = function () {
+		var db = $.jStorage.get("drink_Database");
 		$.ajax({
     		url : db,
 		    dataType:"jsonp",
