@@ -21,8 +21,8 @@ var pour = (function(module) {
 	
 	function pourFunction(){
 	
-		var unitId = $.jStorage.get("unit_ID");
-        var accessToken = $.jStorage.get("access_Token");
+		var unitId = $.jStorage.get("unitID_storage");
+        var accessToken = $.jStorage.get("accessToken_storage");
         //This builds the URL to the REST API endpoint for the setpumps function
         //with your given coreId
         var url = "https://api.spark.io/v1/devices/" + unitId + "/setpumps";
