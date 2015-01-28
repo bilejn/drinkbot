@@ -29,7 +29,7 @@
 			if (!checkConnection()){
 					alert ("No internet connection detected. Connect to internet and try again to download list.");
 		    } else {
-				if ($.jStorage.get("drink_Database") == null || $.jStorage.get("drink_Database") == ""){
+				if ($.jStorage.get("drinkDatabase_storage") == null || $.jStorage.get("drinkDatabase_storage") == ""){
 					alert ("Insert address of the database under settings section");			 
 				 } else {
 					window.plugins.toast.showShortCenter('Loading List');

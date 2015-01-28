@@ -71,7 +71,7 @@
 					<div data-role="header" data-position="fixed" data-theme="a"  class="header-style" data-tap-toggle="false" >
 						<div class="my-header-grid ui-grid-b">
 								<div class="ui-block-a">
-									<a href=""><img src="img/recycleIcon.jpg" /></a>
+									<a href=""><img src="img/recycleIcon.jpg"  onclick="refresh()"/></a>
 								</div>
 								<div class="ui-block-b">
 									<a href="#home"><img src="img/DrinkbotLogolight.jpg" /></a>
@@ -124,7 +124,7 @@
 					<div data-role="header" data-position="fixed" data-theme="a"  class="header-style" data-tap-toggle="false" >
 						<div class="my-header-grid ui-grid-b">
 								<div class="ui-block-a">
-									<a href=""><img src="img/recycleIcon.jpg" /></a>
+									<a href=""><img src="img/recycleIcon.jpg" onclick="refresh()"/></a>
 								</div>
 								<div class="ui-block-b">
 									<a href="#home"><img src="img/DrinkbotLogolight.jpg" /></a>
@@ -138,17 +138,17 @@
 					
 				<div data-role="content" data-theme="a" class="addSettings">
 						<h2>Settings</h2>
-					    <form name="settingsForm" action="" onsubmit="return settingsFormf();"  data-ajax="false" >
+					    <form id="settingsForm" name="settingsForm" action="" onsubmit="return settingsFormf();"  data-ajax="false" >
 
 									<br />
 									<label id="unitIDLabel" for="unitID" >unitID:</label>
-									<input type="text" name="unitID" id="unitID" value="" placeholder="unitID"/>
+									<input type="text" name="unitID" id="unitID" value="" placeholder="unitID"  />
 									<br />
 									<label id="accessTokenLabel" for="accessToken" >Access Token:</label>
-									<input type="text" name="accessToken" id="accessToken" value="" placeholder="Access Token"/>
+									<input type="text" name="accessToken" id="accessToken" value="" placeholder="Access Token" />
 									<br />
 									<label id="drinkDatabaseLabel" for="drinkDatabase" >Drink Database:</label>
-									<input  type="text" name="drinkDatabase" id="drinkDatabase" value="" placeholder="Drink Database"/>
+									<input  type="text" name="drinkDatabase" id="drinkDatabase" value="" placeholder="Drink Database" />
 
 									<input type="submit" value="Submit"  id="submit" data-role="button" data-icon="check">
 

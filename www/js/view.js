@@ -57,14 +57,14 @@ $(document).on("pagebeforeshow", "#home", function (){
 });
 
 $(document).on("pagebeforeshow", "#settingsSection", function (){
-	if ($.jStorage.get("unit_ID") != null){
-		document.settingsForm.unitID.value = $.jStorage.get("unit_ID");
+	if ($.jStorage.get("unitID_storage") != null){
+		document.settingsForm.unitID.value = $.jStorage.get("unitID_storage");
 	}
-	if ($.jStorage.get("access_Token") != null){
-		document.settingsForm.accessToken.value = $.jStorage.get("access_Token");	
+	if ($.jStorage.get("accessToken_storage") != null){
+		document.settingsForm.accessToken.value = $.jStorage.get("accessToken_storage");	
 	}
-	if ($.jStorage.get("drink_Database") != null){
-		document.settingsForm.drinkDatabase.value = $.jStorage.get("drink_Database");	
+	if ($.jStorage.get("drinkDatabase_storage") != null){
+		document.settingsForm.drinkDatabase.value = $.jStorage.get("drinkDatabase_storage");	
 	}
 
 	$("#settingsSection").trigger("create");
