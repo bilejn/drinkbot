@@ -53,6 +53,11 @@ table {
 			height: auto;
 		} 
 
+		@media all{
+        .my-footer-grid.ui-grid-b .ui-block-a { width: 50%; }
+        .my-footer-grid.ui-grid-b .ui-block-b { width: 50%; }
+        }
+ 
 
 .ui-grid-a img{
 	width: 100%;
