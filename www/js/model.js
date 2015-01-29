@@ -11,6 +11,7 @@ var model = (function(base) {
 		    dataType:"jsonp",
 		    jsonp:"mycallback",
 		    success:function(data, textStatus, jqXHR) {
+				$.jStorage.set("data", "");
 				$.jStorage.set("data", data);
 				$.mobile.changePage( "#home", { allowSamePageTransition: true } );
 		    },

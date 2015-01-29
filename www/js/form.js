@@ -13,16 +13,11 @@
 		});
 			
 			if (ok){
-			/*	$("#unitIDLabel").removeClass("invalid");
-				$("#accessTokenLabel").removeClass("invalid");
-				$("#drinkDatabaseLabel").removeClass("invalid"); */
-				alert("Thank you");
-				//showAlert("Submitted", emptyFunction, "Thank you.", 'OK');
+				showAlert("Submitted", emptyFunction, "Thank you.", 'OK');
 				$.mobile.changePage( "#settingsSection", { allowSamePageTransition: true } );
 				return false;
 			} else {
-				alert("Fill in all fields");
-				//showAlert("Not submitted", emptyFunction, "Please fill in all fields.", 'OK');
+				showAlert("Not submitted", emptyFunction, "Please fill in all fields.", 'OK');
 				$.mobile.changePage( "#settingsSection", { allowSamePageTransition: true } );
 				return false;			
 			}

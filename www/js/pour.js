@@ -3,7 +3,7 @@ var pour = (function(module) {
 	var args;
 
 	module.drink = function (drinkName, c0, c1, c2, c3, c4, c5, c6, c7){
-		args = "P0:"+c1+";P1:"+c4+";P2:"+c3+";P3:"+c2+";P4:"+c5+";P5:"+c7+";P6:"+c6+";P7:"+c0
+		args = "P0:"+c1+";P1:"+c4+";P2:"+c3+";P3:"+c2+";P4:"+c5+";P5:"+c7+";P6:"+c6+";P7:"+c0;
 		var title = "New Order";
 		var message = "Pour "+ drinkName + "?";
 		callback;
@@ -26,7 +26,7 @@ var pour = (function(module) {
         //This builds the URL to the REST API endpoint for the setpumps function
         //with your given coreId
         var url = "https://api.spark.io/v1/devices/" + unitId + "/setpumps";
-		
+
         //Turn on the alertInfo div to show the user that the pumping is being attempted
         //Make the Ajax Call
         $.ajax({

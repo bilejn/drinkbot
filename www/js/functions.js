@@ -4,7 +4,7 @@
     }
 	
 	// Show a custom alert
-		//
+		
 		function showAlert(title, callback, message, button) {
 			navigator.notification.alert(
 				message,          // title
