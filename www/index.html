@@ -60,7 +60,7 @@
 					   
 					</div>   
 					
-				<div data-role="footer" data-position="fixed" data-theme="b" class="footer-style" data-tap-toggle="false" >
+				<div data-role="footer" data-position="fixed" data-theme="b" class="home-footer-style" data-tap-toggle="false" >
 					<div class="my-footer-grid ui-grid-a">
 								<div class="ui-block-a">
 									<a href="#empty"><img src="img/corkscrew.jpg" /></a>
@@ -120,8 +120,15 @@
 					
 				</div>   
 					
-				<div data-role="footer" data-position="fixed" data-theme="b" class="footer-style" data-tap-toggle="false" >
-					<a href="" data-role="none" ><h4>SAVE</h4></a>
+				<div data-role="footer" data-position="fixed" data-theme="b" class="footer-style" data-tap-toggle="false" >			
+					<div class="my-footer-grid ui-grid-a">
+								<div class="ui-block-a" >
+									<a href="" onclick=""  style="color: #9e9bae;" >ERASE</a>
+								</div>
+								<div class="ui-block-b"  >
+									<a href="" onclick=""  style="color: #9e9bae;" >SAVE</a>
+								</div>
+					</div>					
 				</div>
 		</section>		
 		
@@ -145,29 +152,37 @@
 					</div>
 					
 					
-				<div data-role="content" data-theme="a" class="addSettings">
-						<h2>Settings</h2>
+				<div data-role="content" data-theme="a" class="addSettings contentNoPadding">
+						<p>Settings</p>
+						<p> &nbsp </p>
 					    <form id="settingsForm" name="settingsForm" action="" onsubmit="return settingsFormf();"  data-ajax="false" >
 
 									<br />
-									<label id="unitIDLabel" for="unitID" >unitID:</label>
+									<label id="unitIDLabel" for="unitID" >UnitID:</label>
 									<input type="text" name="unitID" id="unitID" value="" placeholder="unitID"  />
 									<br />
 									<label id="accessTokenLabel" for="accessToken" >Access Token:</label>
 									<input type="text" name="accessToken" id="accessToken" value="" placeholder="Access Token" />
 									<br />
-									<label id="drinkDatabaseLabel" for="drinkDatabase" >Drink Database:</label>
+									<label id="drinkDatabaseLabel" for="drinkDatabase" >Database:</label>
 									<input  type="text" name="drinkDatabase" id="drinkDatabase" value="" placeholder="Drink Database" />
 
-									<input type="submit" value="Submit"  id="submit" data-role="button" data-icon="check">
 
 						</form>
 
-				</div>   
-				<div data-role="footer" data-position="fixed" data-theme="b" class="footer-style" data-tap-toggle="false" >
-					<a href="#home" data-role="none" onclick="deleteSettings();"><h4>DELETE SETTINGS</h4></a>
-				</div>					
-
+				</div>  
+				
+				<div data-role="footer" data-position="fixed" data-theme="b" class="footer-style" data-tap-toggle="false" >			
+					<div class="my-footer-grid ui-grid-a">
+								<div class="ui-block-a" >
+									<a href="" onclick="deleteSettings();"  style="color: #9e9bae;" >ERASE</a>
+								</div>
+								<div class="ui-block-b" >
+									<a href="" onclick="$('#settingsForm').submit();" style="color: #9e9bae;">SAVE</a>
+								</div>
+					</div>					
+				</div>
+				
 		</section>
 		
 		

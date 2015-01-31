@@ -29,6 +29,7 @@
 				$.jStorage.set("unitID_storage",  "");
 				$.jStorage.set("accessToken_storage", "");
 				$.jStorage.set("drinkDatabase_storage", "");
+				$.mobile.changePage( "#settingsSection", { allowSamePageTransition: true } );
 			} else {
 				alert("Cancelled");
 			}

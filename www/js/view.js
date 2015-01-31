@@ -6,7 +6,7 @@ $(document).on("pagebeforeshow", "#home", function (){
 	if($.jStorage.get("data")){
 			var list;
 			var grid = true;
-			var json = JSON.parse($.jStorage.get("data"));
+			var json = JSON.parse(model.getJson());
 			var list = '<div class="ui-grid-a">';
 			for (i = 0; i < json.length; i++){
 				if (grid) { 

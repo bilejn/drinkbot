@@ -1,28 +1,36 @@
 var model = (function(base) {
-	var json;
-			
 	
-	base.getJson = json;
+	var db = $.jStorage.get("drinkDatabase_storage");
+	var json = $.jStorage.get("data");
 	
-	base.setJson = function () {
-		var db = $.jStorage.get("drinkDatabase_storage");
-		$.ajax({
-    		url : db,
-		    dataType:"jsonp",
-		    jsonp:"mycallback",
-		    success:function(data, textStatus, jqXHR) {
-				$.jStorage.set("data", "");
-				$.jStorage.set("data", data);
-				$.mobile.changePage( "#home", { allowSamePageTransition: true } );
-		    },
-			error: function(jqXHR, textStatus, errorThrown) {
-				window.plugins.toast.showShortCenter("Error loading list.");
-			},
-			complete: function (jqXHR, textStatus){
+	
+	return {
+	
+		getJson: function () {
+			return  $.jStorage.get("data");
+		},
+	
+		setJson: function () {
+			$.ajax({
+				url : db,
+				dataType:"jsonp",
+				jsonp:"mycallback",
+				success:function(data, textStatus, jqXHR) {
+					$.jStorage.set("data", data);
+					$.mobile.changePage( "#home", { allowSamePageTransition: true } );
+				},
+				error: function(jqXHR, textStatus, errorThrown) {
+					window.plugins.toast.showShortCenter("Error loading list.");
+				},
+				complete: function (jqXHR, textStatus){
 
-			}
-		});
+				}
+			});
+		},
+		
+		deleteJson: function () {
+			$.jStorage.set("data", "");
+		}
 	}
 	
-	return base;
 }( model || {}));

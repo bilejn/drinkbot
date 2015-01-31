@@ -26,16 +26,17 @@
 		
 		
 		function refresh () {
-			if (!checkConnection()){
+			/* if (!checkConnection()){
 					alert ("No internet connection detected. Connect to internet and try again to download list.");
-		    } else {
-				if ($.jStorage.get("drinkDatabase_storage") == null || $.jStorage.get("drinkDatabase_storage") == ""){
+		    } else { */
+				if ( $.jStorage.get("drinkDatabase_storage") == null || $.jStorage.get("drinkDatabase_storage") == ""){
 					alert ("Insert address of the database under settings section");			 
 				 } else {
-					window.plugins.toast.showShortCenter('Loading List');
+					alert("loading list");
+					//window.plugins.toast.showShortCenter('Loading List');
 					model.setJson();
 				}	
-			}
+			//}
 		}
 		
 		
