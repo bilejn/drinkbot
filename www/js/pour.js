@@ -26,7 +26,7 @@ var pour = (function(module) {
         //This builds the URL to the REST API endpoint for the setpumps function
         //with your given coreId
         var url = "https://api.spark.io/v1/devices/" + unitId + "/setpumps";
-
+		alert(args);
         //Turn on the alertInfo div to show the user that the pumping is being attempted
         //Make the Ajax Call
         $.ajax({
