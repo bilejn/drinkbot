@@ -3,7 +3,7 @@
 // ======================================= HOME ======================================
 
 $(document).on("pagebeforeshow", "#home", function (){
-	if($.jStorage.get("data")){
+	/* if($.jStorage.get("data")){
 			var list;
 			var grid = true;
 			var json = JSON.parse(model.getJson());
@@ -24,7 +24,27 @@ $(document).on("pagebeforeshow", "#home", function (){
 			list = list + '</div>';
 			$("#homeScreenList").html(list);
 			$("#home").trigger("create"); 
-	}
+	} */
+			var list;
+			var grid = true;
+			var data = ["Cosmopolitan","CubaLibre","Daiquiri","Firefighter","Margarita","Mojito","MoscowMule","P2","Screwdriver","WhiskeySour"];
+			var list = '<div class="ui-grid-a">';
+			for (i = 0; i < data.length; i++){
+				if (grid) { 
+					var block = '<div class="ui-block-a">';
+				} else {
+					var block = '<div class="ui-block-b">';
+				}
+				list = list + block + '<img src="img/drink/' + data[i] + '.jpg" id ="' + data[i] + '" onclick ="alert(\'Pour '+data[i]+'\')" /> </div>'; 
+				if (grid) {
+					grid = false;
+				} else {
+					grid = true;
+				}
+			}
+			list = list + '</div>';
+			$("#homeScreenList").html(list);
+			$("#home").trigger("create"); 
 });
 
 // ======================================= SETTINGS ======================================
